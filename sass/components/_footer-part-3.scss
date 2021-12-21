@@ -1,0 +1,125 @@
+.input-text {
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+        height: 50px;
+        margin-right: 12px;
+    }
+}
+
+.input-icon {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+.user-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.phone-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.envelope-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.input-wrapper.user-aggrement {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-text:focus-within {
+    outline: transparent;
+    border-color: $color-link;
+}
+
+.input-text:focus-within+.input-icon .icon-svg {
+    fill: $color-link;
+}
+
+.input-text.email {
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 16px;
+    color: #f5f4fa;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.input-text::placeholder {
+    font-size: $main-font-size;
+    line-height: 20px;
+    letter-spacing: calc($main-font-size * 0.03);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-text.email:not(:placeholder-shown) {
+    border: 1px solid $color-link;
+}
+
+.input-label.small-top {
+    margin-bottom: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+    text-transform: capitalize;
+}
+
+.input-label.light {
+    color: #f5f4fa;
+}
+
+.email-form .btn {
+    display: flex;
+    align-items: center;
+}
+
+.icon-send {
+    fill: $color-text;
+    width: 24px;
+    height: 24px;
+}
+
+.submit-text+.icon-send {
+    margin-left: 10px;
+}
+
+.base-btn {
+    @media screen and (max-width: 767px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.user-email-form {
+    @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-direction: column;
+    }
+}
